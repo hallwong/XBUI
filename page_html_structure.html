@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="renderer" content="webkit">
+
+    <title>XBUI-首页</title>
+    
+    <meta content="all" name="robots" /><!--爬虫设置--> 
+    <meta name="keywords" content="网页关键字" />
+    <meta name="description" content="网页描述" />
+    <meta name="author" content="网页作者">
+    <meta name="copyright" content="网页版权描述" />
+
+    <!--favicon-->  
+    <link href="favicon.ico" rel="bookmark" type="image/x-icon" /> 
+    <link href="favicon.ico" rel="icon" type="image/x-icon" /> 
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <!-- //favicon -->
+
+    <!-- 检测浏览器 -->
+    <noscript>你的浏览器已禁用javascript，请启用javascript，否则网页将非正常运行！</noscript>
+    <script src="js/xiaobing.checkbrowser.js"></script> 
+    <!-- //检测浏览器 -->
+
+    <!-- BASE JS -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <!-- zui-1.4.0 -->
+    <link href="css/zui-1.5.0/css/zui.min.css" rel="stylesheet">
+    <script src="css/zui-1.5.0/js/zui.min.js"></script>
+
+
+    <!-- 布局，版面 -->
+    <link rel="stylesheet" href="css/xiaobing-ui.base.css" > 
+    <link rel="stylesheet" href="css/xiaobing-ui.libs.css">
+
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/layer-v3.0.1/layer.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/skitter/jquery.skitter.min.js"></script>
+    <script src="js/drop-down/jquery.general_selector.js"></script>
+ 
+    <script src="js/xiaobing.interaction.js"></script>
+    <script src="js/xiaobing.common.run.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5/html5shiv.min.js"></script>
+      <script src="js/html5/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  <body>
+  <!--[if lt IE 8]>
+    <div class="alert alert-danger">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+  <![endif]-->
+
+  <!-- 外套 -->
+  <div class="layout">
+    <div class="wrapper" id="wrapper">
+      <div class="container w-p100 p-n">
+        
+        <!-- 主体 -->
+        <div class="main">
+          <div class="mainwrap">
+            <!-- 文档演示区域 -->
+            <div class="page">
+                <!-- 页头 -->
+                <div id="pageHeader">
+                  <div class="wrapper container">
+                    <!-- title ico -->
+                    <i class="icon icon-code"></i>
+
+                    <h2><a class="name" href="#component/code">代码</a></h2>
+
+                    <button type="button" class="btn btn-link" id="pageTogger" title=""></button>
+                    <!-- 刷新 -->
+                    <!-- 
+                    <button title="" type="button" class="btn btn-link" id="pageReloadBtn">
+                      <i class="icon-repeat"></i>
+                    </button> 
+                    -->
+                    <!-- 关闭 -->
+                    <button title="" type="button" class="btn btn-link" id="pageCloseBtn">
+                      <!-- <i class="icon-close"></i> -->
+                      <i class="icon icon-times"></i>
+                    </button>
+                  </div>
+                </div>
+               
+                <div id="pageBody" class="scrollbar-hover">
+                    <div class="container">
+                        <div class="container">
+                            <div id="pageAttrs" class="clearfix" style="display: block;">
+                                <div class="badge badge-zui" style="" data-toggle="tooltip" title="" data-original-title="此组件在标准版中提供">
+                                    ZUI
+                                </div>
+                                <div class="badge badge-lite" style="" data-toggle="tooltip" title="" data-original-title="此组件在简洁版中提供">
+                                    LITE
+                                </div>
+                                <div class="badge badge-lib" style="display: none" data-toggle="tooltip"
+                                title="" data-original-title="此组件在lib目录中单独提供">
+                                    LIB
+                                </div>
+                                <a class="badge badge-party" style="display: none" data-toggle="tooltip"
+                                title="" target="_blank" data-original-title="这是第三方组件，点击访问网站" href="javascript:;">
+                                    <i class="icon icon-heart">
+                                    </i>
+                                    <span class="product-ver">
+                                    </span>
+                                </a>
+                                <a class="badge badge-bootstrap" style="" data-toggle="tooltip" title=""
+                                target="_blank" href="http://getbootstrap.com/" data-original-title="该组件最初来源于 Bootstrap，点击访问 Bootstrap 网站">
+                                    B
+                                </a>
+                                <div class="badge badge-custom" style="display: none" data-toggle="tooltip"
+                                title="" data-original-title="此组件可以拆分使用">
+                                    <i class="icon icon-cogs">
+                                    </i>
+                                </div>
+                                <div class="badge badge-version" style="" data-toggle="tooltip" title=""
+                                data-original-title="此组件的最早提供版本">
+                                    1.0.0+
+                                </div>
+                                <div class="badge badge-author hidden" data-toggle="tooltip" title=""
+                                data-original-title="本文档作者" style="display: none;">
+                                    <i class="icon icon-user">
+                                    </i>
+                                    <span class="author-name">
+                                        Catouse
+                                    </span>
+                                </div>
+                                <a href="https://github.com/easysoft/zui/tree/master/docs/part/component-listgroup.md"
+                                target="_blank" class="badge badge-source pull-right" data-toggle="tooltip"
+                                title="" data-original-title="访问文档源码，Fork项目来完善文档">
+                                    <i class="icon icon-pencil">
+                                    </i>
+                                </a>
+                                <div class="dropdown pull-right badge-code-dropdown">
+                                    <button type="button" data-toggle="dropdown" title="查看源码和打包信息" class="badge btn btn-link badge-code"
+                                    data-type="has-source-bundles">
+                                        <span class="badge-code-source">
+                                            <i class="icon icon-file-code">
+                                            </i>
+                                            <span class="count">
+                                                1
+                                            </span>
+                                        </span>
+                                        <span class="badge-code-pkgs">
+                                            <i class="icon icon-cube">
+                                            </i>
+                                            <span class="count">
+                                                2
+                                            </span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-header primary-header" data-type="source">
+                                            <i class="icon icon-file-code">
+                                            </i>
+                                            源码 1
+                                        </li>
+                                        <li class="dropdown-header">
+                                            LESS
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/src/less/components/list-group.less">
+                                                src/less/components/list-group.less
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-header primary-header" data-type="bundles">
+                                            <i class="icon icon-cube">
+                                            </i>
+                                            打包
+                                        </li>
+                                        <li class="dropdown-header">
+                                            标准版
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/dist/css/zui.css">
+                                                dist/css/zui.css
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-header">
+                                            简洁版
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/dist/css/zui.lite.css">
+                                                dist/css/zui.lite.css
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-content">
+                            <section class="">
+                              <header><h3>筛选风格一</h3></header>
+                              <article>
+                              <!-- 实例 -->
+                              <div class="example">
+                              <!-- +++++++++++++++ -->
+
+<pre style="margin:15px 0;font:100 12px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ccc 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#a50">&lt;!-- 布局 --&gt;</span><br><span style="color:#170">&lt;div</span> <span style="color:#00c">class</span>=<span style="color:#a11">"layout"</span><span style="color:#170">&gt;</span><br>    <span style="color:#a50">&lt;!--外套--&gt;</span><br>    <span style="color:#170">&lt;div</span> <span style="color:#00c">class</span>=<span style="color:#a11">"wrapper"</span> <span style="color:#00c">id</span>=<span style="color:#a11">"wrapper"</span><span style="color:#170">&gt;</span><br>      <span style="color:#a50">&lt;!--容器--&gt;</span><br>      <span style="color:#170">&lt;div</span> <span style="color:#00c">class</span>=<span style="color:#a11">"container"</span><span style="color:#170">&gt;</span><br>            <span style="color:#a50">&lt;!-- 页头 --&gt;</span><br>            <span style="color:#170">&lt;header</span> <span style="color:#00c">class</span>=<span style="color:#a11">"header"</span><span style="color:#170">&gt;</span><br>            <span style="color:#170">&lt;/header</span><span style="color:#170">&gt;</span><br>            <span style="color:#a50">&lt;!-- 主体 --&gt;</span><br>            <span style="color:#170">&lt;div</span> <span style="color:#00c">class</span>=<span style="color:#a11">"main"</span><span style="color:#170">&gt;</span><br>            <span style="color:#170">&lt;/div</span><span style="color:#170">&gt;</span><br>            <span style="color:#a50">&lt;!-- 页尾 --&gt;</span><br>            <span style="color:#170">&lt;footer</span> <span style="color:#00c">class</span>=<span style="color:#a11">"footer"</span><span style="color:#170">&gt;</span><br>                  <span style="color:#a50">&lt;!--版权--&gt;</span><br>                  <span style="color:#170">&lt;div</span> <span style="color:#00c">class</span>=<span style="color:#a11">"copy"</span><span style="color:#170">&gt;</span><br>                       <span style="color:#170">&lt;p</span><span style="color:#170">&gt;</span>Copyright  2016@ All Rights Reserved<span style="color:#170">&lt;/p</span><span style="color:#170">&gt;</span><br>                  <span style="color:#170">&lt;/div</span><span style="color:#170">&gt;</span><br>            <span style="color:#170">&lt;/footer</span><span style="color:#170">&gt;</span><br>        <span style="color:#170">&lt;/div</span><span style="color:#170">&gt;</span><br>    <span style="color:#170">&lt;/div</span><span style="color:#170">&gt;</span><br><span style="color:#170">&lt;/div</span><span style="color:#170">&gt;</span></pre>
+
+
+                              </div>
+                              </article>
+                            </section>
+
+                        </div>
+                        
+<!-- 代码 -->
+<!-- <div class="code">
+<pre class="syntax brush-css">
+&lt;style type="text/css" media="screen"&gt;
+    /* Please note the CSS styled text - embedded in HTML */
+    .floyd {
+        is-any-one-out-there: "?";
+        padding: 10px;
+    }
+&lt;/style&gt;
+</pre>
+</div> -->
+                        <!-- 文档增强阅读 -->
+                        <script src="js/syntax/jquery.syntax.js" type="text/javascript"></script>
+                        <script src="js/syntax/jquery.syntax.cache.js" type="text/javascript"></script>
+                        <script>
+                        //<!--
+                          jQuery(function($) {                   
+                            $.syntax();
+                          });
+                        //-->
+                        </script>
+
+                        <script src="css/zui-1.5.0/lib/prettify/prettify.js"></script>
+                        <script src="http://zui.sexy/assets/marked/marked.min.js"></script>
+                        <script>
+                          window.prettyPrint();
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+            
+
+
+
+          </div>
+        </div>
+
+        <!-- 页尾 -->
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

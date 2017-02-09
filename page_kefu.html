@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="renderer" content="webkit">
+
+    <title>XBUI-首页</title>
+    
+    <meta content="all" name="robots" /><!--爬虫设置--> 
+    <meta name="keywords" content="网页关键字" />
+    <meta name="description" content="网页描述" />
+    <meta name="author" content="网页作者">
+    <meta name="copyright" content="网页版权描述" />
+
+    <!--favicon-->  
+    <link href="favicon.ico" rel="bookmark" type="image/x-icon" /> 
+    <link href="favicon.ico" rel="icon" type="image/x-icon" /> 
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <!-- //favicon -->
+
+    <!-- 检测浏览器 -->
+    <noscript>你的浏览器已禁用javascript，请启用javascript，否则网页将非正常运行！</noscript>
+    <script src="js/xiaobing.checkbrowser.js"></script> 
+    <!-- //检测浏览器 -->
+
+    <!-- BASE JS -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <!-- zui-1.4.0 -->
+    <link href="css/zui-1.5.0/css/zui.min.css" rel="stylesheet">
+    <script src="css/zui-1.5.0/js/zui.min.js"></script>
+
+
+    <!-- 布局，版面 -->
+    <link rel="stylesheet" href="css/xiaobing-ui.base.css" > 
+    <link rel="stylesheet" href="css/xiaobing-ui.libs.css">
+
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/layer-v3.0.1/layer.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/skitter/jquery.skitter.min.js"></script>
+    <script src="js/drop-down/jquery.general_selector.js"></script>
+ 
+    <script src="js/xiaobing.interaction.js"></script>
+    <script src="js/xiaobing.common.run.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5/html5shiv.min.js"></script>
+      <script src="js/html5/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+  <body>
+  <!--[if lt IE 8]>
+    <div class="alert alert-danger">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+  <![endif]-->
+
+  <!-- 外套 -->
+  <div class="layout">
+    <div class="wrapper" id="wrapper">
+      <div class="container w-p100 p-n">
+        
+        <!-- 主体 -->
+        <div class="main">
+          <div class="mainwrap">
+            <!-- 文档演示区域 -->
+            <div class="page">
+                <!-- 页头 -->
+                <div id="pageHeader">
+                  <div class="wrapper container">
+                    <!-- title ico -->
+                    <i class="icon icon-code"></i>
+
+                    <h2><a class="name" href="#component/code">代码</a></h2>
+
+                    <button type="button" class="btn btn-link" id="pageTogger" title=""></button>
+                    <!-- 刷新 -->
+                    <!-- 
+                    <button title="" type="button" class="btn btn-link" id="pageReloadBtn">
+                      <i class="icon-repeat"></i>
+                    </button> 
+                    -->
+                    <!-- 关闭 -->
+                    <button title="" type="button" class="btn btn-link" id="pageCloseBtn">
+                      <!-- <i class="icon-close"></i> -->
+                      <i class="icon icon-times"></i>
+                    </button>
+                  </div>
+                </div>
+               
+                <div id="pageBody" class="scrollbar-hover">
+                    <div class="container">
+                        <div class="container">
+                            <div id="pageAttrs" class="clearfix" style="display: block;">
+                                <div class="badge badge-zui" style="" data-toggle="tooltip" title="" data-original-title="此组件在标准版中提供">
+                                    ZUI
+                                </div>
+                                <div class="badge badge-lite" style="" data-toggle="tooltip" title="" data-original-title="此组件在简洁版中提供">
+                                    LITE
+                                </div>
+                                <div class="badge badge-lib" style="display: none" data-toggle="tooltip"
+                                title="" data-original-title="此组件在lib目录中单独提供">
+                                    LIB
+                                </div>
+                                <a class="badge badge-party" style="display: none" data-toggle="tooltip"
+                                title="" target="_blank" data-original-title="这是第三方组件，点击访问网站" href="javascript:;">
+                                    <i class="icon icon-heart">
+                                    </i>
+                                    <span class="product-ver">
+                                    </span>
+                                </a>
+                                <a class="badge badge-bootstrap" style="" data-toggle="tooltip" title=""
+                                target="_blank" href="http://getbootstrap.com/" data-original-title="该组件最初来源于 Bootstrap，点击访问 Bootstrap 网站">
+                                    B
+                                </a>
+                                <div class="badge badge-custom" style="display: none" data-toggle="tooltip"
+                                title="" data-original-title="此组件可以拆分使用">
+                                    <i class="icon icon-cogs">
+                                    </i>
+                                </div>
+                                <div class="badge badge-version" style="" data-toggle="tooltip" title=""
+                                data-original-title="此组件的最早提供版本">
+                                    1.0.0+
+                                </div>
+                                <div class="badge badge-author hidden" data-toggle="tooltip" title=""
+                                data-original-title="本文档作者" style="display: none;">
+                                    <i class="icon icon-user">
+                                    </i>
+                                    <span class="author-name">
+                                        Catouse
+                                    </span>
+                                </div>
+                                <a href="https://github.com/easysoft/zui/tree/master/docs/part/component-listgroup.md"
+                                target="_blank" class="badge badge-source pull-right" data-toggle="tooltip"
+                                title="" data-original-title="访问文档源码，Fork项目来完善文档">
+                                    <i class="icon icon-pencil">
+                                    </i>
+                                </a>
+                                <div class="dropdown pull-right badge-code-dropdown">
+                                    <button type="button" data-toggle="dropdown" title="查看源码和打包信息" class="badge btn btn-link badge-code"
+                                    data-type="has-source-bundles">
+                                        <span class="badge-code-source">
+                                            <i class="icon icon-file-code">
+                                            </i>
+                                            <span class="count">
+                                                1
+                                            </span>
+                                        </span>
+                                        <span class="badge-code-pkgs">
+                                            <i class="icon icon-cube">
+                                            </i>
+                                            <span class="count">
+                                                2
+                                            </span>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-header primary-header" data-type="source">
+                                            <i class="icon icon-file-code">
+                                            </i>
+                                            源码 1
+                                        </li>
+                                        <li class="dropdown-header">
+                                            LESS
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/src/less/components/list-group.less">
+                                                src/less/components/list-group.less
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-header primary-header" data-type="bundles">
+                                            <i class="icon icon-cube">
+                                            </i>
+                                            打包
+                                        </li>
+                                        <li class="dropdown-header">
+                                            标准版
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/dist/css/zui.css">
+                                                dist/css/zui.css
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-header">
+                                            简洁版
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://github.com/easysoft/zui/blob/v1.5.0/dist/css/zui.lite.css">
+                                                dist/css/zui.lite.css
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-content">
+                            <section class="">
+                              <header><h3>基本类型</h3></header><article>
+                              <div class="example">
+
+  <!-- KEFUTU role="kefu" <i class="icon>图标区</i>-->
+
+  <div class="kefutu-container" id="kefu" role="kefu">
+    <i class="kefutu-arrow">
+        <span class="border_arrow"></span>
+        <span class="con_arrow"></span>
+    </i>
+    <!-- 连接 -->
+    <div class="kefutu-item">
+      <a href="javascript:">
+        <i class="kefutu-item-icon icon iconfont"><img src="js/kefutu2.1/images/kefutu-icons-qq.png" alt="qq"></i>
+        <span class="kefutu-item-title">QQ咨询</span>
+      </a>
+      <div class="kefutu-item-content">
+        <div class="kefutu-item-content-container">
+            <p>销售：<i class="icon iconfont">&#xe606;</i><a href="#">53832198</a></p>
+            <!-- <p>销售：<i class="icon iconfont">&#xe606;</i><a href="#">253832198</a></p>
+            <p>销售：<i class="icon iconfont">&#xe606;</i><a href="#">1250565415</a></p> -->
+           <!--  
+            <p>客服：<i class="icon iconfont">&#xe606;</i>1250565415</p>
+            <p>经理：<i class="icon iconfont">&#xe606;</i>54866555</p> 
+            -->
+        </div>
+      </div>
+    </div>
+    <!-- 链接 -->
+    <div class="kefutu-item">
+      <a href="javascript:">
+        <i class="kefutu-item-icon icon iconfont"><img src="js/kefutu2.1/images/kefutu-icons-chat.png" alt=""></i>
+        <span class="kefutu-item-title">我有话说</span>
+      </a>
+      <!-- <div class="kefutu-item-content">
+          <div class="kefutu-item-content-container">
+                这是自定义文字面板 
+          </div>
+      </div> -->
+    </div>
+    <!-- 电话 -->
+    <div class="kefutu-item">
+      <a href="javascript:">
+        <i class="kefutu-item-icon icon iconfont"><img src="js/kefutu2.1/images/kefutu-icons-phone.png" alt=""></i>
+        <span class="kefutu-item-title">电话</span>
+      </a>
+      <div class="kefutu-item-content">
+        <div class="kefutu-item-content-container">
+            <p><strong>销售： 13551393375</strong></p>
+            <p><strong>销售： 400-1888-6886</strong></p>
+            <p><strong>销售： 400-1888-6886</strong></p>
+           <!--  
+            <p>客服： 400-1888-6886</p>
+            <p>经理： 400-1888-6886</p>
+            <p>经理： 400-1888-6886</p> 
+            -->
+        </div>
+      </div>
+    </div>
+    <!-- 二维码 -->
+    <div class="kefutu-item">
+      <a href="javascript:">
+        <i class="icon iconfont kefutu-item-icon"><img src="js/kefutu2.1/images/kefutu-icons-qr.png" alt=""></i>
+        <span class="kefutu-item-title">扫二维码</span>
+      </a>
+      <div class="kefutu-item-content">
+        <div class="kefutu-item-content-container">
+            <img src="images/erweima.jpg" class="kefutu-qr-img">
+        </div>
+      </div>
+    </div>
+    <!-- 表单 -->
+    <div class="kefutu-item item-form">
+      <a href="javascript:">
+        <i class="kefutu-item-icon icon iconfont"><img src="js/kefutu2.1/images/kefutu-icons-form.png" alt=""></i>
+        <span class="kefutu-item-title">留言</span>
+      </a>
+      <div class="kefutu-item-content">
+        <div class="kefutu-item-content-container">
+        <form action="?" method="post" class="k-form-message">
+            <div class="form-group clearfix">
+              <label for="" class="k-label">称呼：</label>
+              <div class="k-input">
+                <input type="text" class="form-control" id="" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group clearfix">
+              <label for="exampleInputEmail1" class="k-label">手机：</label>
+              <div class="k-input">
+              <input type="text" class="form-control" id="" placeholder="Mobile">
+              </div>
+            </div>
+            <div class="form-group clearfix">
+              <label for="exampleInputEmail1" class="k-label">邮箱：</label>
+              <div class="k-input">
+              <input type="email" class="form-control" id="" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group clearfix">
+              <label for="exampleInputEmail1" class="k-label">内容：</label>
+              <div class="k-input k-textarea">
+              <textarea class="form-control" placeholder="Message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="form-group clearfix">
+              <label for="exampleInputEmail1" class="k-label">验证码：</label>
+              <!-- 验证码 -->
+              <div class="k-input kefu-vcode">
+                 <div class="kefu-vcode-imgbox"><img src="images/admin.png" _src="images/admin.png"></div>
+                 <input type="text" class="form-control" id="" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group k-form-foot">
+              <button type="submit" class="btn k-btn-submit">提交</button><button type="reset" class="btn k-btn-reset">重置</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 返回顶部 -->
+    <div class="kefutu-item item-gotop">
+      <a href="javascript:">
+        <i class="icon iconfont kefutu-item-icon"><img src="images/kefutu-icons-gotop.png" alt=""></i>
+        <span class="kefutu-item-title">返回顶部</span>
+      </a>
+    </div>
+
+  </div>
+  <link rel="stylesheet" href="js/kefutu2.1/css/kefutu.css">
+  <script src="js/kefutu2.1/js/kefutu-v2.1.js"></script>
+  <script type="text/javascript">
+  $(function(){         
+    $('#kefu').KEFUTU({
+      service:'on',//是否打开服务 on off
+      skin:'',//自定义风格.yourclass
+      horizontal:'right',//水平 left， rihgt
+      offset:'middle',//垂直偏移量,middle：垂直居中
+      targetCell:'',//基于目标对象定位
+      durationTime: 300,//缓动时间
+    });
+  });
+  </script>
+  <!-- //KEFUTU -->
+                              </div>
+                              </article>
+                            </section>
+
+                        </div>
+                        
+
+
+                        <!-- 为 pre 增加 prettyprint CLASS -->
+                        <pre class="prettyprint linenums">
+/*==============================================
+ * 小兵客服2.1
+ * by WangHao
+ * Copyright 2016 xb, Inc. Author WANGHAO 
+ * Licensed under the MIT license
+ */
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1467259620'); /* IE9*/
+  src: url('iconfont.eot?t=1467259620#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1467259620') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1467259620') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1467259620#iconfont') format('svg'); /* iOS 4.1- */
+}
+/*web font*/
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-unie61d:before { content: "\e601"; }
+.icon-liaotian:before { content: "\e609"; }
+.icon-erweima:before { content: "\e60a"; }
+.icon-dianhua:before { content: "\e60b"; }
+.icon-weixin:before { content: "\e602"; }
+.icon-fanhuidingbu:before { content: "\e600"; }
+.icon-qq:before { content: "\e606"; }
+.icon-icontianxiebiaodan:before { content: "\e60c"; }
+.icon-huidaodingbu:before { content: "\e604"; }
+.icon-weixin1:before { content: "\e605"; }
+
+
+.kefutu-container{
+    font-family: "Microsoft YaHei","微软雅黑",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    opacity: .9;
+    width: 78px;
+    display: none;
+}
+.kefutu-container,.kefutu-container a,.kefutu-container div,.kefutu-container i,.kefutu-container span,.kefutu-container p{
+    -webkit-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -ms-box-sizing:content-box;
+    -o-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    margin:0;
+}
+.kefutu-container a:hover{text-decoration: none}
+.kefutu-container .kefutu-item{
+    width:78px;
+    padding: 3px 0;
+    margin-bottom: 1px;
+    position: relative;
+    background: rgb(147, 147, 147);
+    -moz-box-shadow: 0px 0 6px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0px 0 6px rgba(0,0,0,.3);
+    box-shadow: 0px 0 6px rgba(0,0,0,.3);
+}
+
+.kefutu-container .kefutu-item >a{
+   display: block;width:100%;height: 100%;margin:0 auto;text-align: center;color: #ffffff;
+}
+.kefutu-container .kefutu-item >a:focus{text-decoration: none}
+.kefutu-container .kefutu-item-icon{display: inline-block;width:100%;height: auto;text-align: center;}
+.kefutu-container .kefutu-item-title{display: block;font-family: "Micosoft Yahei"; font-size: 12px;padding: 0 3px;text-align: center}
+.kefutu-container .kefutu-item >a:hover .kefutu-item-title{}
+/*内容*/
+.kefutu-container .kefutu-item .kefutu-item-content-container{
+  padding: 8px 8px;
+}
+.kefutu-container .kefutu-item .kefutu-item-content{
+  display:none ;
+  position: absolute;
+  color: #fff;
+  background:transparent;
+  width: 200px;
+  min-height:100%;
+  right: 100%;
+  bottom: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.kefutu-container .kefutu-item .kefutu-item-content a{color: #fff}
+.kefutu-container .kefutu-item-content p{margin:0;/*padding: 6px 20px;*/font-size: 14px;}
+.kefutu-container .kefutu-arrow{display: none; position: absolute;z-index: 99; left:0;top:0%;}
+.kefutu-container .border_arrow,.kefutu-container .con_arrow{
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 0 3px 3px;
+  border-color: transparent transparent transparent #dddddd;
+  line-height: 0px;
+  _border-color: #000000 #000000 #000000 #dddddd;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: absolute;
+  left: 1px;
+}
+.kefutu-container .con_arrow{
+  left: 0;
+  border-color: transparent transparent transparent #ffffff;
+  _border-color: #000000 #000000 #000000 #ffffff;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff');
+}
+
+/*客服头*/
+.kefutu-container .kefutu-head {
+}
+.kefutu-container .kefutu-head .kefutu-item-icon{font-size: 30px;}
+/*电话*/
+.kefutu-container .item-tel .kefutu-item-content{font-family: "Tahoma";font-weight: bold;}
+
+.kefutu-container .item-tel .multiItem p{padding: 3px 6px}
+/*二维码*/
+.kefutu-qr-img{max-width: 100%;width: auto\9;height: auto;}
+/*
+.kefutu-container .item-qr .kefutu-item-content{display:;background: #fff!important;width:250px ; height: 270px;margin-top: -180px;margin-right: 10px;}
+.kefutu-container .item-qr .kefutu-item-content .item-qr-box{border: 1px solid #ddd;position: relative;font-size: 12px;padding: 6px;}
+.kefutu-container .item-qr .kefutu-item-content .kefutu-triangle{position: absolute;right: -6px;top:75%;font-size: 14px; width: 20px;height: 20px;}
+.kefutu-container .item-qr .kefutu-item-content .border_sj{font-family: "simsun";color: #ddd; position: absolute;right: -1px;}
+.kefutu-container .item-qr .kefutu-item-content .con_sj{font-family: "simsun";color: #fff; position: absolute;right:0;z-index: 9}
+.kefutu-container .item-qr .kefutu-item-content .item-qr-box img{width: 236px;height: 236px;}
+*/
+/*留言*/
+.kefutu-container .item-form .kefutu-item-content{
+   width:300px;
+   background-color: #f9f9f9;
+   padding: 10px 10px;
+  -moz-box-shadow: 0px 0 6px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0px 0 6px rgba(0,0,0,.3);
+  box-shadow: 0px 0 6px rgba(102,102,0,.3);
+}
+.kefutu-container .form-control{
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.kefutu-container .item-form .k-label{width: 20%;float: left;font-size: 12px;height: 35px;line-height: 35px;}
+.kefutu-container .item-form .k-input{width: 80%;float: left;font-size: 12px;}
+.kefutu-container .item-form .k-textarea .form-control{height: 80px;}
+.kefutu-container .item-form .form-group{margin-bottom: 8px;}
+.kefutu-container .item-form .k-form-foot {text-align: right;}
+.kefutu-container .item-form .k-form-foot .btn{margin-left: 12px;margin-bottom: 0}
+.kefutu-container .item-form .k-form-foot .k-btn-submit{background-color: #555;color: #fff}
+.kefutu-container .item-form .k-form-foot .k-btn-reset{background-color: #999;color: #fff}
+.kefutu-container .item-form .k-form-foot img{width: 120px;height: 30px;}
+/*验证码*/
+.kefu-vcode{position: relative;}
+.kefu-vcode .kefu-vcode-imgbox{position: absolute;top:-50px;width: 100%;height: 30px;display: none}
+/*返回顶部*/
+.kefutu-container .item-gotop{display:none}
+/*鼠标划过*/
+.kefutu-container .on{
+  background: rgb(248, 79, 69);
+}
+.kefutu-container .on .kefutu-item-content{
+  background: rgb(248, 79, 69);
+}
+/*定义风格样式*/
+.blue .kefutu-item{background: blue}
+/*.blue .kefutu-item.on{background: #fff}*/
+.blue .on{
+  background:red;
+}
+.blue .on .kefutu-item-content{
+  background: blue;
+}
+
+                        </pre>
+
+
+                        <!--  -->
+
+                        <!-- 为 pre 增加 prettyprint CLASS -->
+                        <pre class="prettyprint linenums">
+
+<link rel="stylesheet" href="js/kefutu2.1/css/kefutu.css">
+<script src="js/kefutu2.1/js/kefutu-v2.1.js"></script>
+<script type="text/javascript">
+$(function(){         
+$('#kefu').KEFUTU({
+  service:'on',//是否打开服务 on off
+  skin:'',//自定义风格.yourclass
+  horizontal:'right',//水平 left， rihgt
+  offset:'middle',//垂直偏移量,middle：垂直居中
+  targetCell:'',//基于目标对象定位
+  durationTime: 300,//缓动时间
+});
+});
+</script>
+</pre>
+
+                        
+
+
+
+
+                        <!-- <link rel="stylesheet" href="css/zui-1.5.0/lib/prettify/prettify.css"> -->
+                        <script src="css/zui-1.5.0/lib/prettify/prettify.js"></script>
+                        <script src="http://zui.sexy/assets/marked/marked.min.js"></script>
+                        <script>
+                          window.prettyPrint();
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+            
+
+
+
+          </div>
+        </div>
+
+        <!-- 页尾 -->
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
